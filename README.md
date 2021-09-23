@@ -13,8 +13,6 @@ FoxBot
 ---
 [Сообщество VK](https://vk.com/foxbot_discord/)
 |
-[Главный сервер бота](https://discord.com/invite/vSmhjMKTBF/)
-|
 [Пригласить бота](https://bit.ly/3kVIgEh/)
 |
 [Commands list](https://vk.com/@foxbot_discord-commands-list)
