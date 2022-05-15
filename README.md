@@ -1,5 +1,3 @@
-[![Discord Bots](https://discordbotlist.com/bots/760437599524487189/widget)](https://discordbotlist.com/bots/760437599524487189)
-===
 FoxBot
 ===
 ### Описание:
@@ -11,3 +9,5 @@ FoxBot
 [Сообщество VK](https://vk.com/foxbot_discord/)
 |
 [Commands list](https://vk.com/@foxbot_discord-commands-list)
+===
+[![Discord Bots](https://discordbotlist.com/bots/760437599524487189/widget)](https://discordbotlist.com/bots/760437599524487189)
