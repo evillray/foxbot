@@ -10,6 +10,4 @@ FoxBot
 ---
 [Сообщество VK](https://vk.com/foxbot_discord/)
 |
-[Пригласить бота](https://bit.ly/3kVIgEh/)
-|
 [Commands list](https://vk.com/@foxbot_discord-commands-list)
