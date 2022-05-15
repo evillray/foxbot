@@ -11,4 +11,5 @@ FoxBot
 [Commands list](https://vk.com/@foxbot_discord-commands-list)
 
 ===
+
 [![Discord Bots](https://discordbotlist.com/bots/760437599524487189/widget)](https://discordbotlist.com/bots/760437599524487189)
