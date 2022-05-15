@@ -4,12 +4,9 @@ FoxBot
 ===
 ### Описание:
 ---
-#### The bot is primarily intended for the Russian audience. The bot can be used in different scenarios, for example: roleplay, information, moderation, fun.
+#### The bot is primarily intended for the russian audience. The bot can be used in different scenarios, for example: roleplay, information, moderation, fun.
 ---
-#### FoxBot - это бот, совмещающий в себе множество направлений, например: РП, модерирование и развлечения.
----
-### Остальное:
-* Бот логирует все использованные пользователями комманды.
+#### Бот в первую очередь рассчитан на российскую аудиторию. Бит может быть использован в различных сценариях, например: ролевая игра, информация, модерация, веселье.
 ---
 [Сообщество VK](https://vk.com/foxbot_discord/)
 |
