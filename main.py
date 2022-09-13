@@ -70,8 +70,6 @@ async def on_command_error(ctx, error):
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
     embed.set_footer(text="eblan")
     await ctx.send(embed=embed)
-    embed = discord.Embed(color = 0xffa500, title="FoxBot", description="Здравствуйте, приносим свои извинения за неполадки в работе бота. Мы не ожидали что наш бот будет стоять на большом кол-ве серверов, из-за чего идёт очень большая нагрузка. Мы вынуждены ограничить скорсть использования комманд до 10 секунд. Мы постараемся вскоре решить эту проблему. Приносим свои извинения. По всем вопросам - пишите разработчику: `demafurry#4811`")
-    await ctx.channel.send(embed=embed)
     await ctx.message.delete()
 
 @bot.event
@@ -814,7 +812,7 @@ async def help(ctx, arg="Default"):
             "```>>meme {theme}```Рандомная аниме-тян - лисичка ^^:\n"
             "```>>foxgrl```")
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         await ctx.send(embed=embed)
     elif str(arg) == "NSFW" or str(arg) == "nsfw" or str(arg) == "Nsfw":
         embed = discord.Embed(color=0xffa500, title="NSFW commands list:", description="Анал:\n"
@@ -824,7 +822,7 @@ async def help(ctx, arg="Default"):
             "```>>ero```Эро-юри:\n"
             "```>>eroyuri```")
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-        embed.set_footer(text="Fox 2020 | demafurry#4811 eblan")
+        embed.set_footer(text="eblan")
         await ctx.send(embed=embed)
 
 bot.run(config.TOKEN)
