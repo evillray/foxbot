@@ -92,7 +92,7 @@ async def on_command(ctx):
 
 @commands.cooldown(1, 10, commands.BucketType.user)
 @bot.command(pass_context=True)
-async def meme(ctx, arg="furry_irl"):
+async def meme(ctx, arg="it"):
     subreddit = reddit.subreddit(str(arg))
     memes_submissions = subreddit.hot()
     post_to_pick = random.randint(1, 10)
