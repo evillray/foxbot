@@ -68,7 +68,7 @@ async def on_command_error(ctx, error):
     embed = discord.Embed(color = 0xffa500, title="Error:")
     embed.add_field(name="Error message:", value="```" + str(error) + "```", inline=False)
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-    embed.set_footer(text="Fox 2020 | demafurry#4811")
+    embed.set_footer(text="eblan")
     await ctx.send(embed=embed)
     embed = discord.Embed(color = 0xffa500, title="FoxBot", description="Здравствуйте, приносим свои извинения за неполадки в работе бота. Мы не ожидали что наш бот будет стоять на большом кол-ве серверов, из-за чего идёт очень большая нагрузка. Мы вынуждены ограничить скорсть использования комманд до 10 секунд. Мы постараемся вскоре решить эту проблему. Приносим свои извинения. По всем вопросам - пишите разработчику: `demafurry#4811`")
     await ctx.channel.send(embed=embed)
@@ -80,7 +80,7 @@ async def on_guild_join(guild):
     await user.send("Бот " + str(bot.user.name) + " добавлен на сервер: " + str(guild.name))
     guildowner = guild.owner
     embed = discord.Embed(color = 0xffa500, title="FoxBot", description="Привет, `" + str(guildowner.name) + "`,спасибо что добавили меня на сервер `" + str(guild.name) + "`. Ниже расположена вся необходимая информация:\n:exclamation: Прежде чем использовать бота, желательно добавить на свой сервер роль `FoxAdminAccess` и выдать её нужным участникам(Советуем не выдавать данную роль не доверенным лицам, так-как они, в противном случае - смогут почти полностью управлять вашим сервером, что опасно). Просим выдать боту роль с максимальными правами, иначе бот может работать некорректно.\n:bangbang: Данного бота можно использовать во многих сценариях, но главным всё же остаётся РП.\n:anger: В случае неисправности, просим написать главному разработчику `demafurry#4811` и, желательно, подробно описать ошибку.\n:hotsprings: Данный бот написан на ЯП Python, все претензии к нему: :snake: , а не к разработчику. Если же вы считаете, что виноват *именно* ***разработчик***, а не :snake: , то писать тоже `demafurry#4811`.\n:globe_with_meridians: Бот в большинстве случаев использует чужое api из интернета, из-за которого иногда могут происходить ошибки.\n:white_check_mark: Для получения помощи, а именно, списка комманд для бота, напишите: `>>help` на сервере.")
-    embed.set_footer(text="Fox 2020 | demafurry#4811")
+    embed.set_footer(text="eblan")
     nowtime = datetime.datetime.now()
     logging.info('[' + str(nowtime.year) + '/' + str(nowtime.month) + '/' + str(nowtime.day) + ' ' + str(nowtime.hour) + ':' + str(nowtime.minute) + ':' + str(nowtime.second) + ']' + "Бот " + str(bot.user.name) + " добавлен на сервер: " + str(guild.name))
     await guildowner.send(embed=embed)
@@ -103,7 +103,7 @@ async def meme(ctx, arg="furry_irl"):
     embed = discord.Embed(color = 0xffa500, title=str("Держи:"))
     embed.set_image(url=str(submission.url))
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-    embed.set_footer(text="Fox 2020 | demafurry#4811")
+    embed.set_footer(text="eblan")
     await ctx.channel.send(embed=embed)
 
 @commands.cooldown(1, 10, commands.BucketType.user)
@@ -113,7 +113,7 @@ async def petpet(ctx):
     embed = discord.Embed(color = 0xffa500, title=str("Держи:"))
     embed.set_image(url=re)
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-    embed.set_footer(text="Fox 2020 | demafurry#4811")
+    embed.set_footer(text="eblan")
     await ctx.send(embed=embed)
 
 @commands.cooldown(1, 10, commands.BucketType.user)
@@ -124,7 +124,7 @@ async def foxgrl(ctx):
     embed = discord.Embed(color = 0xffa500, title=str("Держи:"))
     embed.set_image(url=str(apiout))
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-    embed.set_footer(text="Fox 2020 | demafurry#4811")
+    embed.set_footer(text="eblan")
     await ctx.channel.send(embed=embed)
 
 @commands.cooldown(1, 10, commands.BucketType.user)
@@ -135,7 +135,7 @@ async def ping(ctx):
     embed = discord.Embed(color = 0xffa500, title="Pong, " + str(ctx.author.name) + "!")
     embed.add_field(name="ws/API Latency:", value=str(round(bot.latency, 5)) + "s", inline=False)
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-    embed.set_footer(text="Fox 2020 | demafurry#4811")
+    embed.set_footer(text="eblan")
     await ctx.send(embed=embed)
 
 @commands.cooldown(1, 10, commands.BucketType.user)
@@ -152,18 +152,18 @@ async def slap(ctx, arg:discord.Member="None"):
             else:
                 embeddescription = str(ctx.author.mention) + " дал(-а) пощёчину " + str(arg.mention)
             embed = discord.Embed(description=embeddescription, color=0xffa500)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
+            embed.set_footer(text="eblan")
             embed.set_image(url=imagegif)
             embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
             await ctx.send(embed=embed)
         else:
             embed = discord.Embed(title="Error:", description="Вы не можете выполнить данное действие.", color=0xffa500)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
+            embed.set_footer(text="eblan")
             embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
             await ctx.send(embed=embed)
     else:
         embed = discord.Embed(title="Error:", description="Вы не можете выполнить данное действие.", color=0xffa500)
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
 
@@ -181,18 +181,18 @@ async def hug(ctx, arg:discord.Member="None"):
             else:
                 embeddescription = str(ctx.author.mention) + " обнял(-а) " + str(arg.mention)
             embed = discord.Embed(description=embeddescription, color=0xffa500)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
+            embed.set_footer(text="eblan")
             embed.set_image(url=imagegif)
             embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
             await ctx.send(embed=embed)
         else:
             embed = discord.Embed(title="Error:", description="Вы не можете выполнить данное действие.", color=0xffa500)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
+            embed.set_footer(text="eblan")
             embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
             await ctx.send(embed=embed)
     else:
         embed = discord.Embed(title="Error:", description="Вы не можете выполнить данное действие.", color=0xffa500)
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
 
@@ -210,18 +210,18 @@ async def lick(ctx, arg:discord.Member="None"):
             else:
                 embeddescription = str(ctx.author.mention) + " лизнул(-а) " + str(arg.mention)
             embed = discord.Embed(description=embeddescription, color=0xffa500)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
+            embed.set_footer(text="eblan")
             embed.set_image(url=imagegif)
             embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
             await ctx.send(embed=embed)
         else:
             embed = discord.Embed(title="Error:", description="Вы не можете выполнить данное действие.", color=0xffa500)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
+            embed.set_footer(text="eblan")
             embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
             await ctx.send(embed=embed)
     else:
         embed = discord.Embed(title="Error:", description="Вы не можете выполнить данное действие.", color=0xffa500)
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
 
@@ -239,18 +239,18 @@ async def pat(ctx, arg:discord.Member="None"):
             else:
                 embeddescription = str(ctx.author.mention) + " погладил(-а) " + str(arg.mention)
             embed = discord.Embed(description=embeddescription, color=0xffa500)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
+            embed.set_footer(text="eblan")
             embed.set_image(url=imagegif)
             embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
             await ctx.send(embed=embed)
         else:
             embed = discord.Embed(title="Error:", description="Вы не можете выполнить данное действие.", color=0xffa500)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
+            embed.set_footer(text="eblan")
             embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
             await ctx.send(embed=embed)
     else:
         embed = discord.Embed(title="Error:", description="Вы не можете выполнить данное действие.", color=0xffa500)
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
 
@@ -268,18 +268,18 @@ async def kiss(ctx, arg:discord.Member="None"):
             else:
                 embeddescription = str(ctx.author.mention) + " поцеловал(-а) " + str(arg.mention)
             embed = discord.Embed(description=embeddescription, color=0xffa500)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
+            embed.set_footer(text="eblan")
             embed.set_image(url=imagegif)
             embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
             await ctx.send(embed=embed)
         else:
             embed = discord.Embed(title="Error:", description="Вы не можете выполнить данное действие.", color=0xffa500)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
+            embed.set_footer(text="eblan")
             embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
             await ctx.send(embed=embed)
     else:
         embed = discord.Embed(title="Error:", description="Вы не можете выполнить данное действие.", color=0xffa500)
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
 
@@ -297,25 +297,25 @@ async def punch(ctx, arg:discord.Member="None"):
             else:
                 embeddescription = str(ctx.author.mention) + " ударил(-а) " + str(arg.mention)
             embed = discord.Embed(description=embeddescription, color=0xffa500)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
+            embed.set_footer(text="eblan")
             embed.set_image(url=imagegif)
             embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
             await ctx.send(embed=embed)
         else:
             embed = discord.Embed(title="Error:", description="Вы не можете выполнить данное действие.", color=0xffa500)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
+            embed.set_footer(text="eblan")
             embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
             await ctx.send(embed=embed)
     else:
         embed = discord.Embed(title="Error:", description="Вы не можете выполнить данное действие.", color=0xffa500)
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
 
 @bot.command(pass_context=True)
 async def invitebot(ctx):
     embed = discord.Embed(title="Share this invite link | UwU", description="https://bit.ly/2JVoP0D\nVK group: https://vk.com/foxbot_discord", color=0xffa500)
-    embed.set_footer(text="Fox 2020 | demafurry#4811")
+    embed.set_footer(text="eblan")
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
     await ctx.send(embed=embed)
 
@@ -325,7 +325,7 @@ async def randomfox(ctx):
     response = requests.get('https://randomfox.ca/floof/')
     json_data = json.loads(response.text)
     embed = discord.Embed(color = 0xffa500, title = 'Рандомная фотография лисы:')
-    embed.set_footer(text="Fox 2020 | demafurry#4811")
+    embed.set_footer(text="eblan")
     embed.set_image(url = json_data['image'])
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
     await ctx.send(embed = embed)
@@ -336,7 +336,7 @@ async def randomdog(ctx):
     response = requests.get('https://dog.ceo/api/breeds/image/random')
     json_data = json.loads(response.text)
     embed = discord.Embed(color = 0xffa500, title = 'Рандомная фотография собаки:')
-    embed.set_footer(text="Fox 2020 | demafurry#4811")
+    embed.set_footer(text="eblan")
     embed.set_image(url = json_data['message'])
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
     await ctx.send(embed = embed)
@@ -348,7 +348,7 @@ async def randomcat(ctx):
     json_data = json.loads(response.text)
     json_data = json_data[0]
     embed = discord.Embed(color = 0xffa500, title = 'Рандомная фотография кошки:')
-    embed.set_footer(text="Fox 2020 | demafurry#4811")
+    embed.set_footer(text="eblan")
     embed.set_image(url = json_data['url'])
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
     await ctx.send(embed = embed)
@@ -360,12 +360,12 @@ async def shipp(ctx, user1:discord.Member, user2:discord.Member):
     user2 = ctx.guild.get_member(user2.id)
     if user1.id != user2.id and user1.id != ctx.author.id and user2.id != ctx.author.id:
         embed = discord.Embed(color = 0xffa500, description=str(ctx.author.mention) + " зашиперил " + str(user1.mention) + " с " + str(user2.mention))
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
     else:
         embed = discord.Embed(title="Error:", description="Вы не можете выполнить данное действие.", color=0xffa500)
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
 
@@ -407,7 +407,7 @@ async def user(ctx, user:discord.Member=None):
             embed.add_field(name="Пользователь:", value="Имя пользователя: **" + str(user.name) + "#" + str(user.discriminator) + "**\nID: **" + str(user.id) + "**\nСтатус: **" + str(statuseslist[str(user.status)]) + "**\nЗарегистрировался: **" + str(user.created_at.day) + " " + str(monthslist[int(user.created_at.month) - 1]) + ". " + str(user.created_at.year) + " г., " + str(user.created_at.hour) + ":" + str(user.created_at.minute) + ":" + str(user.created_at.second) + "**", inline=True)
             embed.add_field(name="Сервер:", value="Зашёл: **" + str(user.joined_at.day) + " " + str(monthslist[int(user.joined_at.month) - 1]) + ". " + str(user.joined_at.year) + " г., " + str(user.joined_at.hour) + ":" + str(user.joined_at.minute) + ":" + str(user.joined_at.second) + "**", inline=True)
             embed.add_field(name="FoxBot:", value="FoxAdminAccess: **" + str(foxadminstatus) + "**", inline=False)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
+            embed.set_footer(text="eblan")
             embed.set_thumbnail(url=user.avatar_url)
             embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
             if msgid == False:
@@ -421,7 +421,7 @@ async def user(ctx, user:discord.Member=None):
         embed.add_field(name="Пользователь:", value="Имя пользователя: **" + str(user.name) + "#" + str(user.discriminator) + "**\nID: **" + str(user.id) + "**\nСтатус: **" + str(statuseslist[str(user.status)]) + "**\nЗарегистрировался: **" + str(user.created_at.day) + " " + str(monthslist[int(user.created_at.month) - 1]) + ". " + str(user.created_at.year) + " г., " + str(user.created_at.hour) + ":" + str(user.created_at.minute) + ":" + str(user.created_at.second) + "**", inline=True)
         embed.add_field(name="Сервер:", value="Зашёл: **" + str(user.joined_at.day) + " " + str(monthslist[int(user.joined_at.month) - 1]) + ". " + str(user.joined_at.year) + " г., " + str(user.joined_at.hour) + ":" + str(user.joined_at.minute) + ":" + str(user.joined_at.second) + "**", inline=True)
         embed.add_field(name="FoxBot:", value="FoxAdminAccess: **" + str(foxadminstatus) + "**", inline=False)
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         embed.set_thumbnail(url=user.avatar_url)
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
@@ -505,7 +505,7 @@ async def server(ctx):
     embed.add_field(name="Уровень проверки:", value=str(verifylvlslist[str(ctx.guild.verification_level)]), inline=True)
     embed.add_field(name="ID:", value=str(ctx.guild.id), inline=True)
     embed.add_field(name="Дата создания:", value=str(ctx.guild.created_at.day) + " " + str(monthslist[int(ctx.guild.created_at.month) - 1]) + ". " + str(ctx.guild.created_at.year) + " г., " + str(ctx.guild.created_at.hour) + ":" + str(ctx.guild.created_at.minute) + ":" + str(ctx.guild.created_at.second), inline=True)
-    embed.set_footer(text="Fox 2020 | demafurry#4811")
+    embed.set_footer(text="eblan")
     embed.set_thumbnail(url=ctx.guild.icon_url)
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
     await ctx.send(embed=embed)
@@ -518,7 +518,7 @@ async def avatar(ctx, user:discord.Member=None):
     elif user != None:
         user = ctx.guild.get_member(user.id)
     embed = discord.Embed(color = 0xffa500, title="Аватар " + user.name + ":")
-    embed.set_footer(text="Fox 2020 | demafurry#4811")
+    embed.set_footer(text="eblan")
     embed.set_image(url=user.avatar_url)
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
     await ctx.send(embed=embed)
@@ -530,19 +530,19 @@ async def say(ctx, *, message):
     for role in range(len(authorroles)):
         if str(authorroles[role]) == "FoxAdminAccess":
             embed = discord.Embed(color = 0xffa500, title=str(ctx.author.name) + " говорит:", description=str(message))
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
+            embed.set_footer(text="eblan")
             embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
             msgid = await ctx.send(embed=embed)
             if message[0] == "!":
                 end = 0
                 while end != 150:
                     embed = discord.Embed(color = 0xffa500, title=str(ctx.author.name) + " говорит:", description="➟ " + str(message[1:len(message)]))
-                    embed.set_footer(text="Fox 2020 | demafurry#4811")
+                    embed.set_footer(text="eblan")
                     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
                     await msgid.edit(embed=embed)
                     await asyncio.sleep(0.5)
                     embed = discord.Embed(color=0xffa500, title=str(ctx.author.name) + " говорит:", description="➠ " + str(message[1:len(message)]))
-                    embed.set_footer(text="Fox 2020 | demafurry#4811")
+                    embed.set_footer(text="eblan")
                     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
                     await msgid.edit(embed=embed)
                     await asyncio.sleep(0.5)
@@ -602,7 +602,7 @@ async def botinfo(ctx):
     embed.add_field(name="Сервера:", value="Кол-во серверов: **" + str(len(bot.guilds)) + "**\nКол-во участников: **" + str(allusers) + "**\nКол-во текстовых каналов: **" + str(textchannelscount) + "**\nКол-во голосовых каналов: **" + str(voicechannelscount) + "**\nКол-во NSFW каналов: **" + str(nsfwchannelscount) + "**", inline=True)
     embed.add_field(name="Системная информация:", value="RAM usage: **" + str(round(memory_usage()[0], 3)) + "/" + str(round(totalram, 3)) + "mb**\nOperating system family: **" + str(osnameslist[str(os.name)]) + "**\nOperating system platform: **" + str(ossysplatformslist[str(os.sys.platform)]) + "**\nProcessor: **" + str(platform.processor()) + "**\nOperating system: **" + str(platform.system()) + " " + str(platform.release()) + "**\nMachine: **" + str(platform.machine()) + "**\nArchitecture: **" + str(platform.architecture()[0]) + " | " + str(platform.architecture()[1]) + "**", inline=False)
     embed.set_thumbnail(url=bot.user.avatar_url)
-    embed.set_footer(text="Fox 2020 | demafurry#4811")
+    embed.set_footer(text="eblan")
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
     await ctx.send(embed=embed)
 
@@ -616,7 +616,7 @@ async def botservers(ctx):
     guilds = ""
     num = 1
     embed = discord.Embed(color = 0xffa500, title="Сервера с ботом:")
-    embed.set_footer(text="Fox 2020 | demafurry#4811")
+    embed.set_footer(text="eblan")
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
     msgid = await ctx.send(embed=embed)
     for guild in range(len(bot.guilds)):
@@ -664,7 +664,7 @@ async def mplay(ctx, *, url="august"):
 
     if not voice:
         embed = discord.Embed(color = 0xffa500, title="Error:", description="You did not connected to any voice channel yet.")
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         return await ctx.send(embed=embed)
 
@@ -682,7 +682,7 @@ async def mplay(ctx, *, url="august"):
     embed = discord.Embed(color = 0xffa500, title="FoxBot Music")
     embed.add_field(name="Видео: ", value="Название: **" + str(videou.title) + "**\nПросмотров: **" + str(videou.viewcount) + "**\nПродолжительность: **" + str(videou.duration) + "**", inline=False)
     embed.set_image(url=str(videou.bigthumb))
-    embed.set_footer(text="Fox 2020 | demafurry#4811")
+    embed.set_footer(text="eblan")
     embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
     await ctx.send(embed=embed)
 
@@ -694,7 +694,7 @@ async def mstop(ctx):
     if guild_id in connections:
         connections.get(guild_id).stop()
         embed = discord.Embed(color = 0xffa500, title="FoxBot Music", description="Музыка остановлена")
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
 
@@ -708,11 +708,10 @@ async def mleave(ctx):
         await connections.get(guild_id).disconnect()
         del connections[guild_id]
         embed = discord.Embed(color = 0xffa500, title="FoxBot Music", description="Бот вышел из голосового канала")
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
 
-### > Ниже только nsfw!!! Меня заставили(Нет, просто мне надо теги накручивать)
 ### < .........................................................................
 ### > .....####........### .....#####..... ############### ###.........###.....
 ### < .....#####.......### ...####.####... ############### ###.........###.....
@@ -734,7 +733,7 @@ async def anal(ctx):
         embed = discord.Embed(color = 0xffa500, title=str("Держи:"))
         embed.set_image(url=str(apiout))
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         await ctx.channel.send(embed=embed)
 
 @commands.cooldown(1, 5, commands.BucketType.user)
@@ -746,7 +745,7 @@ async def yuri(ctx):
         embed = discord.Embed(color = 0xffa500, title=str("Держи:"))
         embed.set_image(url=str(apiout))
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         await ctx.channel.send(embed=embed)
 
 @commands.cooldown(1, 5, commands.BucketType.user)
@@ -758,7 +757,7 @@ async def hentai(ctx):
         embed = discord.Embed(color = 0xffa500, title=str("Держи:"))
         embed.set_image(url=str(apiout))
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         await ctx.channel.send(embed=embed)
 
 @commands.cooldown(1, 5, commands.BucketType.user)
@@ -770,7 +769,7 @@ async def ero(ctx):
         embed = discord.Embed(color = 0xffa500, title=str("Держи:"))
         embed.set_image(url=str(apiout))
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         await ctx.channel.send(embed=embed)
 
 @commands.cooldown(1, 5, commands.BucketType.user)
@@ -782,115 +781,8 @@ async def eroyuri(ctx):
         embed = discord.Embed(color = 0xffa500, title=str("Держи:"))
         embed.set_image(url=str(apiout))
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="eblan")
         await ctx.channel.send(embed=embed)
-
-@commands.cooldown(1, 5, commands.BucketType.user)
-@bot.command(pass_context=True)
-async def yiff(ctx, arg="Gay"):
-    if ctx.channel.nsfw == True:
-        if str(arg) == "Bulge" or str(arg) == "bulge":
-            apiout = requests.get('https://api.furry.bot/v2/Furry/Bulge').json()
-            apiout = apiout['images']
-            apiout = apiout[0]
-            artistsapi = apiout['artists']
-            artists = ""
-            sourcesapi = apiout['sources']
-            sources = ""
-            urllink = apiout['url']
-            surllink = apiout['shortURL']
-            reportlink = apiout['reportURL']
-            for artist in range(len(artistsapi)):
-                artists = str(artists) + "\n" + str(int(artist + 1)) + ". " + str(artistsapi[int(artist)])
-            for source in range(len(sourcesapi)):
-                sources = str(sources) + "\n" + str(int(source + 1)) + ". " + str(sourcesapi[int(source)])
-            apiout = apiout['url']
-            embed = discord.Embed(color = 0xffa500, title=str("Держи..."))
-            embed.add_field(name="Artists:", value=str(artists), inline=False)
-            embed.add_field(name="Sources:", value=str(sources), inline=False)
-            embed.add_field(name="URL's:", value=str(urllink) + "\n" + str(surllink), inline=False)
-            embed.add_field(name="Report:", value=str(reportlink), inline=False)
-            embed.set_image(url=str(apiout))
-            embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
-            await ctx.channel.send(embed=embed)
-        elif str(arg) == "Gay" or str(arg) == "gay":
-            apiout = requests.get('https://api.furry.bot/v2/Furry/Yiff/Gay').json()
-            apiout = apiout['images']
-            apiout = apiout[0]
-            artistsapi = apiout['artists']
-            artists = ""
-            sourcesapi = apiout['sources']
-            sources = ""
-            urllink = apiout['url']
-            surllink = apiout['shortURL']
-            reportlink = apiout['reportURL']
-            for artist in range(len(artistsapi)):
-                artists = str(artists) + "\n" + str(int(artist + 1)) + ". " + str(artistsapi[int(artist)])
-            for source in range(len(sourcesapi)):
-                sources = str(sources) + "\n" + str(int(source + 1)) + ". " + str(sourcesapi[int(source)])
-            apiout = apiout['url']
-            embed = discord.Embed(color = 0xffa500, title=str("Держи..."))
-            embed.add_field(name="Artists:", value=str(artists), inline=False)
-            embed.add_field(name="Sources:", value=str(sources), inline=False)
-            embed.add_field(name="URL's:", value=str(urllink) + "\n" + str(surllink), inline=False)
-            embed.add_field(name="Report:", value=str(reportlink), inline=False)
-            embed.set_image(url=str(apiout))
-            embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
-            await ctx.channel.send(embed=embed)
-        elif str(arg) == "Lesbian" or str(arg) == "lesbian":
-            apiout = requests.get('https://api.furry.bot/v2/Furry/Yiff/Lesbian').json()
-            apiout = apiout['images']
-            apiout = apiout[0]
-            artistsapi = apiout['artists']
-            artists = ""
-            sourcesapi = apiout['sources']
-            sources = ""
-            urllink = apiout['url']
-            surllink = apiout['shortURL']
-            reportlink = apiout['reportURL']
-            for artist in range(len(artistsapi)):
-                artists = str(artists) + "\n" + str(int(artist + 1)) + ". " + str(artistsapi[int(artist)])
-            for source in range(len(sourcesapi)):
-                sources = str(sources) + "\n" + str(int(source + 1)) + ". " + str(sourcesapi[int(source)])
-            apiout = apiout['url']
-            embed = discord.Embed(color = 0xffa500, title=str("Держи..."))
-            embed.add_field(name="Artists:", value=str(artists), inline=False)
-            embed.add_field(name="Sources:", value=str(sources), inline=False)
-            embed.add_field(name="URL's:", value=str(urllink) + "\n" + str(surllink), inline=False)
-            embed.add_field(name="Report:", value=str(reportlink), inline=False)
-            embed.set_image(url=str(apiout))
-            embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
-            await ctx.channel.send(embed=embed)
-        elif str(arg) == "Straight" or str(arg) == "straight":
-            apiout = requests.get('https://api.furry.bot/v2/Furry/Yiff/Straight').json()
-            apiout = apiout['images']
-            apiout = apiout[0]
-            artistsapi = apiout['artists']
-            artists = ""
-            sourcesapi = apiout['sources']
-            sources = ""
-            urllink = apiout['url']
-            surllink = apiout['shortURL']
-            reportlink = apiout['reportURL']
-            for artist in range(len(artistsapi)):
-                artists = str(artists) + "\n" + str(int(artist + 1)) + ". " + str(artistsapi[int(artist)])
-            for source in range(len(sourcesapi)):
-                sources = str(sources) + "\n" + str(int(source + 1)) + ". " + str(sourcesapi[int(source)])
-            apiout = apiout['url']
-            embed = discord.Embed(color = 0xffa500, title=str("Держи..."))
-            embed.add_field(name="Artists:", value=str(artists), inline=False)
-            embed.add_field(name="Sources:", value=str(sources), inline=False)
-            embed.add_field(name="URL's:", value=str(urllink) + "\n" + str(surllink), inline=False)
-            embed.add_field(name="Report:", value=str(reportlink), inline=False)
-            embed.set_image(url=str(apiout))
-            embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-            embed.set_footer(text="Fox 2020 | demafurry#4811")
-            await ctx.channel.send(embed=embed)
-
-### Выше только nsfw!!! Меня заставили(Нет, просто мне надо теги накручивать)
 
 @commands.cooldown(1, 10, commands.BucketType.user)
 @bot.command(pass_context=True)
@@ -924,20 +816,15 @@ async def help(ctx, arg="Default"):
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
         embed.set_footer(text="Fox 2020 | demafurry#4811")
         await ctx.send(embed=embed)
-        embed = discord.Embed(color = 0xffa500, title="FoxBot", description="Здравствуйте, приносим свои извинения за неполадки в работе бота. Мы не ожидали что наш бот будет стоять на большом кол-ве серверов, из-за чего идёт очень большая нагрузка. Мы вынуждены ограничить скорсть использования комманд до 10 секунд. Мы постараемся вскоре решить эту проблему. Приносим свои извинения. По всем вопросам - пишите разработчику: `demafurry#4811`")
-        await ctx.channel.send(embed=embed)
     elif str(arg) == "NSFW" or str(arg) == "nsfw" or str(arg) == "Nsfw":
-        embed = discord.Embed(color=0xffa500, title="NSFW commands list:", description="Йифф:\n"
-            "```>>yiff {bulge | gay | lesbian | straight}```Анал:\n"
+        embed = discord.Embed(color=0xffa500, title="NSFW commands list:", description="Анал:\n"
             "```>>anal```Хентай:\n"
             "```>>hentai```Юри:\n"
             "```>>yuri```Эро:\n"
             "```>>ero```Эро-юри:\n"
             "```>>eroyuri```")
         embed.set_author(name=ctx.author.name, icon_url=ctx.author.avatar_url)
-        embed.set_footer(text="Fox 2020 | demafurry#4811")
+        embed.set_footer(text="Fox 2020 | demafurry#4811 eblan")
         await ctx.send(embed=embed)
-        embed = discord.Embed(color = 0xffa500, title="FoxBot", description="Здравствуйте, приносим свои извинения за неполадки в работе бота. Мы не ожидали что наш бот будет стоять на большом кол-ве серверов, из-за чего идёт очень большая нагрузка. Мы вынуждены ограничить скорсть использования комманд до 10 секунд. Мы постараемся вскоре решить эту проблему. Приносим свои извинения. По всем вопросам - пишите разработчику: `demafurry#4811`")
-        await ctx.channel.send(embed=embed)
 
 bot.run(config.TOKEN)
